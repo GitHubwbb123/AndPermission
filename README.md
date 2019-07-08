@@ -21,16 +21,19 @@
 # 引用方法
 * AndroidStudio使用方法，gradle一句话远程依赖
 ```groovy
-compile 'com.yanzhenjie:permission:1.0.5'
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+  
+  
+  	dependencies {
+	        implementation 'com.github.GitHubwbb123:AndPermission:1.0.5'
+	}
+  
 ```
-Or Maven:
-```xml
-<dependency>
-  <groupId>com.yanzhenjie</groupId>
-  <artifactId>permission</artifactId>
-  <version>1.0.5</version>
-  <type>pom</type>
-</dependency>
 ```
 
 * Eclipse [下载jar包](https://github.com/yanzhenjie/AndPermission/blob/master/jar/andpermission.jar?raw=true)，并依赖Support的AppCompat项目。
